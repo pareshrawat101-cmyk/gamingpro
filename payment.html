@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ProGamer Bundle — Secure Payment</title>
+  <meta name="description" content="Complete your order for the ProGamer Bundle. Pay securely via UPI — just Rs.599 for the ultimate gaming accessories bundle." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="payment.css" />
+  <!-- EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <span class="logo-icon">&#9889;</span>
+        <span class="logo-text">ProGamer<span class="logo-accent">Bundle</span></span>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="index.html#gallery" class="nav-link">Gallery</a></li>
+        <li><a href="index.html#features" class="nav-link">Features</a></li>
+        <li><a href="index.html#reviews" class="nav-link">Reviews</a></li>
+        <li><a href="payment.html" class="nav-link nav-cta active">Buy Now</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== PAYMENT HERO ===== -->
+  <section class="payment-hero">
+    <div class="payment-hero-bg"></div>
+    <div class="container payment-hero-content">
+      <span class="payment-hero-tag">SECURE CHECKOUT</span>
+      <h1 class="payment-hero-title">Complete Your <span class="gradient-text">Order</span></h1>
+      <p class="payment-hero-desc">Pay securely via UPI and level up your gaming setup today</p>
+    </div>
+  </section>
+
+  <!-- ===== TRUST STRIP ===== -->
+  <div class="trust-strip">
+    <div class="container">
+      <div class="trust-strip-grid">
+        <div class="trust-item-big">
+          <span class="t-icon">&#128737;</span>
+          <div><strong>Secure Payment</strong><br>UPI Encrypted</div>
+        </div>
+        <div class="trust-item-big">
+          <span class="t-icon">&#9989;</span>
+          <div><strong>100% Authentic</strong><br>Verified Products</div>
+        </div>
+        <div class="trust-item-big">
+          <span class="t-icon">&#128652;</span>
+          <div><strong>Fast Delivery</strong><br>3-5 Business Days</div>
+        </div>
+        <div class="trust-item-big">
+          <span class="t-icon">&#128172;</span>
+          <div><strong>24/7 Support</strong><br>Always Here</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== PAYMENT MAIN ===== -->
+  <main class="payment-main">
+    <div class="container">
+      <div class="payment-grid">
+
+        <!-- LEFT: QR Section -->
+        <div class="qr-section">
+          <div class="qr-card">
+            <div class="qr-card-header">
+              <div class="qr-card-title">Scan QR to Pay</div>
+              <div class="qr-card-sub">Use any UPI app — PhonePe, GPay, Paytm, BHIM</div>
+            </div>
+
+            <div class="qr-img-wrap">
+              <img src="payment_qr.jpeg" alt="UPI QR Code - Pay Rs.599" class="qr-img" id="qr-img" />
+              <div class="qr-pulse-ring"></div>
+            </div>
+
+            <div class="qr-download-wrap">
+              <a
+                href="payment_qr.jpeg"
+                download="ProGamer_Bundle_QR.jpeg"
+                class="qr-download-btn"
+                id="qr-download-btn"
+              >
+                &#11015; Download QR Code
+              </a>
+            </div>
+
+            <div class="qr-price-box">
+              <div class="qr-price-label">Total Amount</div>
+              <div class="qr-price-amount">&#8377;599</div>
+            </div>
+
+            <div class="qr-steps">
+              <div class="qr-step">
+                <div class="qr-step-num">1</div>
+                <div class="qr-step-text">&#11015; <strong>Download</strong> the QR code using the button above</div>
+              </div>
+              <div class="qr-step">
+                <div class="qr-step-num">2</div>
+                <div class="qr-step-text">&#128247; <strong>Scan &amp; Pay</strong> &#8377;599 using PhonePe / GPay / Paytm / BHIM</div>
+              </div>
+              <div class="qr-step">
+                <div class="qr-step-num">3</div>
+                <div class="qr-step-text">&#128179; <strong>Copy UTR No.</strong> from your UPI app &amp; fill the form below</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Order Summary -->
+          <div class="order-summary-card">
+            <div class="order-summary-title">Order Summary</div>
+            <div class="order-item">
+              <span class="order-item-name">RGB Gaming Earbuds</span>
+              <span class="order-item-price">&#8377;499</span>
+            </div>
+            <div class="order-item">
+              <span class="order-item-name">Pro Solid Gaming Powder</span>
+              <span class="order-item-price">&#8377;399</span>
+            </div>
+            <div class="order-item">
+              <span class="order-item-name">Google Play Redeem Code &#8377;100-1000</span>
+              <span class="order-item-price">&#8377;299</span>
+            </div>
+            <div class="order-item">
+              <span class="order-item-name">Free Shipping</span>
+              <span style="color:var(--accent-success);font-size:.82rem;font-weight:700;">FREE</span>
+            </div>
+            <hr class="order-divider" />
+            <div class="order-total">
+              <span class="order-total-label">Bundle Total</span>
+              <span class="order-total-value">&#8377;599</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: Form -->
+        <div class="form-section">
+          <div class="form-card">
+            <div class="form-card-title">Complete Your Order Details</div>
+            <div class="form-card-sub">Fill in your information after completing the UPI payment above</div>
+
+            <form id="payment-form" novalidate autocomplete="off">
+              <div class="form-grid">
+
+                <!-- Name -->
+                <div class="form-group">
+                  <label class="form-label" for="name">Full Name <span class="required">*</span></label>
+                  <div class="form-input-icon">
+                    <span class="icon">&#128100;</span>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      class="form-input"
+                      placeholder="Enter your full name"
+                      required
+                      maxlength="80"
+                    />
+                  </div>
+                  <span class="field-error" id="name-error">Please enter your full name</span>
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                  <label class="form-label" for="email">Email Address <span class="required">*</span></label>
+                  <div class="form-input-icon">
+                    <span class="icon">&#9993;</span>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      class="form-input"
+                      placeholder="your@email.com"
+                      required
+                    />
+                  </div>
+                  <span class="field-error" id="email-error">Please enter a valid email</span>
+                </div>
+
+                <!-- Address -->
+                <div class="form-group full">
+                  <label class="form-label" for="address">Delivery Address <span class="required">*</span></label>
+                  <div class="form-input-icon">
+                    <span class="icon">&#127968;</span>
+                    <input
+                      type="text"
+                      id="address"
+                      name="address"
+                      class="form-input"
+                      placeholder="House no., Street, Locality, City, State"
+                      required
+                      maxlength="200"
+                    />
+                  </div>
+                  <span class="field-error" id="address-error">Please enter your delivery address</span>
+                </div>
+
+                <!-- Pincode -->
+                <div class="form-group">
+                  <label class="form-label" for="pincode">PIN Code <span class="required">*</span></label>
+                  <div class="form-input-icon">
+                    <span class="icon">&#128204;</span>
+                    <input
+                      type="text"
+                      id="pincode"
+                      name="pincode"
+                      class="form-input"
+                      placeholder="6-digit PIN code"
+                      required
+                      maxlength="6"
+                      pattern="[0-9]{6}"
+                      inputmode="numeric"
+                    />
+                  </div>
+                  <span class="field-error" id="pincode-error">Enter a valid 6-digit PIN code</span>
+                </div>
+
+                <!-- Amount -->
+                <div class="form-group">
+                  <label class="form-label" for="amount">Amount Paid <span class="required">*</span></label>
+                  <div class="amount-field-wrap">
+                    <input
+                      type="text"
+                      id="amount"
+                      name="amount"
+                      class="form-input"
+                      value="599"
+                      readonly
+                      style="cursor:default;"
+                    />
+                    <span class="amount-lock-badge">FIXED</span>
+                  </div>
+                </div>
+
+                <!-- UTR -->
+                <div class="form-group full">
+                  <label class="form-label" for="utr">UTR / Transaction ID <span class="required">*</span></label>
+                  <div class="form-input-icon">
+                    <span class="icon">&#128179;</span>
+                    <input
+                      type="text"
+                      id="utr"
+                      name="utr"
+                      class="form-input"
+                      placeholder="Paste UTR / Transaction ID from your UPI app"
+                      required
+                      maxlength="50"
+                    />
+                  </div>
+                  <div class="utr-info">
+                    Find your UTR in your UPI app under payment history. It's usually 12 digits.
+                  </div>
+                  <span class="field-error" id="utr-error">Please enter the UTR / Transaction ID</span>
+                </div>
+
+                <!-- Message -->
+                <div class="form-group full">
+                  <label class="form-label" for="message">Additional Notes / Message</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    class="form-input form-textarea"
+                    placeholder="Any special instructions, delivery notes, or message to us (optional)"
+                    maxlength="400"
+                  ></textarea>
+                </div>
+
+              </div>
+
+              <!-- Hidden time field (auto-filled) -->
+              <input type="hidden" id="time" name="time" />
+
+              <!-- Submit -->
+              <div class="form-submit-wrap">
+                <button type="submit" class="btn-submit" id="submit-btn">
+                  <span class="btn-text">Confirm Order &amp; Submit Details</span>
+                  <span class="spin">&#9654;</span>
+                </button>
+              </div>
+
+              <div class="form-trust">
+                <div class="trust-item">&#128274; SSL Secured</div>
+                <div class="trust-item">&#9989; Order Confirmed Instantly</div>
+                <div class="trust-item">&#128233; Email Confirmation</div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ===== SUCCESS MODAL ===== -->
+  <div class="success-modal" id="success-modal" role="dialog" aria-modal="true" aria-labelledby="success-title">
+    <div class="success-modal-backdrop"></div>
+    <div class="success-modal-card">
+      <div class="success-checkmark">&#10004;</div>
+      <h2 class="success-title" id="success-title">Order Placed!</h2>
+      <p class="success-desc">
+        Thank you! Your order details have been received successfully.<br />
+        We'll verify your payment and contact you within <strong>24 hours</strong> to confirm shipment.
+      </p>
+      <div class="success-order-id" id="success-order-id">
+        Order ID: PGB-<span id="order-id-value"></span>
+      </div>
+      <button class="btn-close-success" id="close-success-modal" onclick="closeSuccessModal()">
+        &#127968; Back to Home
+      </button>
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <span class="logo-icon">&#9889;</span>
+            <span class="logo-text">ProGamer<span class="logo-accent">Bundle</span></span>
+          </div>
+          <p class="footer-tagline">Level up your game with premium accessories</p>
+          <div class="footer-social">
+            <a href="#" class="social-btn" id="footer-insta-pay" aria-label="Instagram">IG</a>
+            <a href="#" class="social-btn" id="footer-youtube-pay" aria-label="YouTube">YT</a>
+            <a href="#" class="social-btn" id="footer-discord-pay" aria-label="Discord">DC</a>
+          </div>
+        </div>
+        <div class="footer-links-group">
+          <h4 class="footer-group-title">Navigation</h4>
+          <ul class="footer-link-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#gallery">Gallery</a></li>
+            <li><a href="index.html#features">Features</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-group">
+          <h4 class="footer-group-title">Contact</h4>
+          <ul class="footer-link-list">
+            <li>Email: mggamergamersss@gmail.com</li>
+            <li>Support: 24/7</li>
+            <li>Ships Pan India</li>
+          </ul>
+        </div>
+        <div class="footer-links-group">
+          <h4 class="footer-group-title">Policies</h4>
+          <ul class="footer-link-list">
+            <li><a href="#">Return Policy</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&#169; 2026 ProGamer Bundle. All rights reserved.</p>
+        <p>Powered by EmailJS &amp; UPI</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="payment.js"></script>
+</body>
+</html>
