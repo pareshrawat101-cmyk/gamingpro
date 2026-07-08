@@ -185,7 +185,7 @@ if (paymentForm) {
 
         // Reset form
         paymentForm.reset();
-        document.getElementById('amount').value = '599';
+        document.getElementById('amount').value = '699';
       } else {
         throw new Error('EmailJS returned non-200 status: ' + response.status);
       }
@@ -239,9 +239,9 @@ window.addEventListener('DOMContentLoaded', () => {
   const timeEl = document.getElementById('time');
   if (timeEl) timeEl.value = getCurrentDateTime();
 
-  // Ensure amount is always 599
+  // Ensure amount is always 699
   const amountEl = document.getElementById('amount');
-  if (amountEl) amountEl.value = '599';
+  if (amountEl) amountEl.value = '699';
 
   // Robust QR Code Download Handler
   const downloadBtn = document.getElementById('qr-download-btn');
